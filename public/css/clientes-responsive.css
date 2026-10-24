@@ -1,0 +1,24 @@
+.customers-mobile { display: none; }
+
+@media (max-width: 700px) {
+  .customers-desktop { display: none; }
+  .customers-mobile { display: grid; gap: 12px; padding: 16px; }
+  .customer-mobile-card { min-width: 0; padding: 17px; background: #fff; border: 1px solid var(--border); border-radius: 14px; box-shadow: 0 3px 14px rgba(37,42,54,.045); }
+  .customer-mobile-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; }
+  .customer-mobile-identity { display: flex; align-items: center; gap: 10px; flex: 1; min-width: 0; }
+  .customer-mobile-avatar { flex: 0 0 40px; height: 40px; display: grid; place-items: center; color: var(--primary); background: #F8E8EA; border-radius: 11px; font-size: 19px; }
+  .customer-mobile-name { font-size: 16px; font-weight: 800; line-height: 1.35; color: var(--text); overflow-wrap: anywhere; }
+  .customer-mobile-head .badge { flex: 0 0 auto; }
+  .customer-mobile-details { display: grid; gap: 5px; padding: 16px 0; }
+  .customer-mobile-caption { font-size: 12px; color: var(--muted); font-weight: 600; }
+  .customer-mobile-phone { display: inline-flex; align-items: center; gap: 8px; width: fit-content; font-size: 15px; font-weight: 600; color: var(--text); }
+  .customer-mobile-phone i { color: var(--primary); }
+  .customer-mobile-actions { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 8px; padding-top: 14px; border-top: 1px solid var(--border); }
+  .customer-mobile-actions form { min-width: 0; margin: 0; }
+  .customer-mobile-actions .btn { display: flex; width: 100%; min-height: 46px; justify-content: center; padding: 10px 8px; }
+  .customers-pagination { padding: 14px 16px; }
+}
+
+@media (max-width: 380px) {
+  .customer-mobile-head { flex-wrap: wrap; }
+}

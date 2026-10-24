@@ -1,0 +1,23 @@
+.rp-filter-card { margin-bottom: 22px; }
+.rp-filter-form { display: flex; align-items: end; gap: 24px; flex-wrap: wrap; }
+.rp-filter-form .form-group { width: min(100%, 270px); }
+.rp-filter-form .form-control { min-height: 48px; cursor: pointer; }
+.rp-period-label { display: inline-flex; align-items: center; gap: 9px; min-height: 48px; color: var(--muted); font-size: 13px; }
+.rp-period-label i { color: var(--primary); }
+.rp-stats .stat-card { min-height: 170px; }
+.rp-icon-success { background: #E4F5ED; color: #218568; }
+.rp-icon-warning { background: #FFF3DB; color: #94651D; }
+.rp-chart-card { margin-bottom: 22px; }
+.rp-chart-heading { margin-bottom: 22px; }
+.rp-chart-wrapper { position: relative; width: 100%; height: clamp(300px, 37vw, 430px); }
+.rp-waste-note { display: flex; align-items: flex-start; gap: 15px; background: #FFF9F0; border-color: #F0E3CB; }
+.rp-waste-icon { display: grid; place-items: center; flex: 0 0 42px; height: 42px; border-radius: 12px; background: #FFF0D9; color: #94651D; font-size: 20px; }
+.rp-waste-note h2 { margin: 0 0 7px; font-size: 17px; color: var(--text); }
+.rp-waste-note p { margin: 0; color: #665E54; font-size: 13px; line-height: 1.7; }
+@media (max-width: 600px) {
+    .rp-filter-form { display: grid; gap: 10px; }
+    .rp-filter-form .form-group { width: 100%; }
+    .rp-period-label { min-height: auto; }
+    .rp-chart-wrapper { height: 350px; }
+    .rp-waste-note { padding: 18px; }
+}

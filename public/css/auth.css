@@ -1,0 +1,326 @@
+
+/*----------------------------------*/
+/*---------- AUTENTICAÇÃO ----------*/
+/*----------------------------------*/
+
+.auth-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(400px, 500px);
+    min-height: 100vh;
+    min-height: 100dvh;
+}
+
+/*----------------------------------*/
+/*---------- LADO ESQUERDO ---------*/
+/*----------------------------------*/
+
+.auth-hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: clamp(40px, 8vw, 110px);
+    background:
+        radial-gradient(ellipse at 25% 30%, rgba(255,255,255,.12), transparent 55%),
+        linear-gradient(145deg, #A43D47 0%, #822C35 55%, #65212A 100%);
+    color: #FFFFFF;
+    position: relative;
+    overflow: hidden;
+}
+
+.auth-hero::after {
+    content: '';
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    right: -180px;
+    bottom: -180px;
+    border: 1px solid rgba(255,255,255,.10);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.auth-hero .brand {
+    padding: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.auth-hero .brand-icon {
+    width: 48px;
+    height: 48px;
+    background: rgba(255,255,255,.15);
+    color: #FFFFFF;
+    border: 1px solid rgba(255,255,255,.18);
+    border-radius: 14px;
+}
+
+.auth-hero .brand-name {
+    color: #FFFFFF;
+    font-size: 19px;
+    font-weight: 800;
+}
+
+.auth-hero .brand-subtitle {
+    color: #F2DDE0;
+    font-size: 12px;
+}
+
+.auth-hero h1 {
+    color: #FFFFFF;
+    font-size: clamp(36px, 4vw, 60px);
+    line-height: 1.12;
+    font-weight: 800;
+    letter-spacing: -.045em;
+    max-width: 650px;
+    margin: 42px 0 22px;
+    position: relative;
+    z-index: 1;
+}
+
+.auth-hero h1 span {
+    color: #FFFFFF;
+    opacity: .85;
+}
+
+.auth-hero p {
+    color: #F2DDE0;
+    font-size: 16px;
+    line-height: 1.8;
+    max-width: 470px;
+    position: relative;
+    z-index: 1;
+}
+
+/*----------------------------------*/
+/*---------- LADO DIREITO ----------*/
+/*----------------------------------*/
+
+.auth-panel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px;
+    background: #FFFFFF;
+    border-left: 1px solid var(--border);
+}
+
+.auth-box {
+    width: 100%;
+    max-width: 365px;
+}
+
+.auth-box > .brand-icon {
+    width: 54px;
+    height: 54px;
+    display: grid;
+    place-items: center;
+    background: #F8E8EA;
+    color: var(--primary);
+    border-radius: 16px;
+    font-size: 24px;
+    margin-bottom: 28px;
+}
+
+.auth-box h2 {
+    color: var(--text);
+    font-size: 29px;
+    font-weight: 800;
+    letter-spacing: -.04em;
+    margin: 0 0 10px;
+}
+
+.auth-description {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 32px;
+}
+
+/*----------------------------------*/
+/*---------- FORMULÁRIO ------------*/
+/*----------------------------------*/
+
+.auth-form {
+    display: grid;
+    gap: 22px;
+}
+
+.auth-form .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.auth-form .form-label {
+    color: #444C59;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.auth-form .form-control {
+    width: 100%;
+    height: 50px;
+    padding: 0 16px;
+    background: #FFFFFF;
+    border: 1px solid #DDE1E7;
+    border-radius: 12px;
+    color: var(--text);
+    font-size: 14px;
+    transition: border-color .2s, box-shadow .2s;
+}
+
+.auth-form .form-control::placeholder {
+    color: #9AA1AC;
+}
+
+.auth-form .form-control:hover {
+    border-color: #C8CDD5;
+}
+
+.auth-form .form-control:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(164,61,71,.10);
+}
+
+/* Validação */
+.auth-form .form-control.is-invalid {
+    border-color: var(--danger);
+    background: #FFF7F8;
+    box-shadow: 0 0 0 3px rgba(214,75,92,.08);
+}
+
+.auth-form .form-control.is-invalid:focus {
+    border-color: var(--danger);
+    box-shadow: 0 0 0 4px rgba(214,75,92,.12);
+}
+
+.auth-form .field-error,
+.auth-form .form-error {
+    color: var(--danger);
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* Botão de acesso */
+.auth-form .btn-primary {
+    width: 100%;
+    min-height: 52px;
+    margin-top: 8px;
+    border: 0;
+    border-radius: 12px;
+    background: var(--primary);
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 700;
+    box-shadow: 0 6px 18px rgba(164,61,71,.18);
+    transition: background .2s, transform .2s, box-shadow .2s;
+}
+
+.auth-form .btn-primary:hover {
+    background: var(--primary-hover);
+    box-shadow: 0 9px 24px rgba(164,61,71,.24);
+    transform: translateY(-2px);
+}
+
+.auth-form .btn-primary:active {
+    transform: translateY(0);
+}
+
+/*----------------------------------*/
+/*---------- RODAPÉ ----------------*/
+/*----------------------------------*/
+
+.auth-footer {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.7;
+    text-align: center;
+    margin-top: 38px;
+}
+
+/*----------------------------------*/
+/*---------- AUTOCOMPLETE ----------*/
+/*----------------------------------*/
+
+.auth-form input:-webkit-autofill,
+.auth-form input:-webkit-autofill:hover,
+.auth-form input:-webkit-autofill:focus {
+    -webkit-text-fill-color: var(--text) !important;
+    -webkit-box-shadow: 0 0 0 1000px #FFFFFF inset !important;
+    box-shadow: 0 0 0 1000px #FFFFFF inset !important;
+    caret-color: var(--text);
+}
+
+/*----------------------------------*/
+/*---------- RESPONSIVIDADE --------*/
+/*----------------------------------*/
+
+@media (max-width: 1000px) {
+    .auth-layout {
+        grid-template-columns: minmax(0, 1fr) minmax(360px, 450px);
+    }
+
+    .auth-hero {
+        padding: 50px;
+    }
+
+    .auth-panel {
+        padding: 35px;
+    }
+}
+
+@media (max-width: 850px) {
+    .auth-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .auth-hero {
+        display: none;
+    }
+
+    .auth-panel {
+        min-height: 100vh;
+        min-height: 100dvh;
+        padding: 32px 24px;
+        border-left: none;
+    }
+
+    .auth-box {
+        max-width: 420px;
+    }
+}
+
+@media (max-width: 480px) {
+    .auth-panel {
+        padding: 24px;
+    }
+
+    .auth-box h2 {
+        font-size: 26px;
+    }
+
+    .auth-description {
+        font-size: 13px;
+    }
+
+    .auth-form .form-control {
+        height: 52px;
+        font-size: 16px;
+    }
+
+    .auth-form .btn-primary {
+        min-height: 54px;
+    }
+
+    .auth-footer {
+        margin-top: 30px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .auth-form .btn-primary,
+    .auth-form .form-control {
+        transition: none;
+    }
+}
